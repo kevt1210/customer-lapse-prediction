@@ -61,7 +61,7 @@ The raw data came from parsed PDFs and required real cleanup before modeling:
 | Logistic Regression | 0.662 | 0.495 | 0.793 | 0.610 | **0.760 +/- 0.03** |
 | Random Forest | 0.704 | 0.549 | 0.625 | 0.584 | 0.753 +/- 0.02 |
 
-![Model comparison](figures/model_comparison.png)
+![Model comparison](model_comparison.png)
 
 The two models **tie on AUC** — the flexible model gave no reliable ranking lift,
 consistent with a small sample and largely linear structure, so the interpretable
@@ -70,7 +70,7 @@ just different operating points on the same signal.
 
 ### What predicts lapse
 
-![Coefficients](figures/coefficients.png)
+![Coefficients](coefficients.png)
 
 Frequency and recency dominate (less frequent, less recent -> more lapse); the
 frequency effect is strong but partly mechanical given the target. The more
@@ -79,7 +79,7 @@ the menu were meaningfully stickier.
 
 ### The key business finding
 
-![Revenue concentration](figures/revenue_concentration.png)
+![Revenue concentration](revenue_concentration.png)
 
 Translating predictions into dollars flips the naive story: the at-risk group is
 **~43% of customers but only ~17% of revenue.** Lapse risk concentrates in
@@ -88,7 +88,7 @@ high-value base**, not applied across the whole flagged list.
 
 ### Operating threshold
 
-![Threshold trade-off](figures/threshold_tradeoff.png)
+![Threshold trade-off](threshold_tradeoff.png)
 
 Lower thresholds catch more lapsers at the cost of more false alarms. Given that
 at-risk customers are low-value, a higher-precision operating point is defensible;
